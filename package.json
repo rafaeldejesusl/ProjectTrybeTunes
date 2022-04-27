@@ -12,7 +12,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https:\/\/username.github.io/app-toot-name",
+  "homepage": "https://rafaeldejesusl.github.io/ProjectTrybeTunes/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
