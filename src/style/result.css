@@ -1,0 +1,30 @@
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.result-card {
+  background-color: #666;
+  height: 400px;
+  width: 250px;
+  margin: 10px;
+}
+
+.result-img {
+  height: 60%;
+  width: 100%;
+}
+
+.result-body {
+  color: #fff;
+}
+
+.result-link {
+  color: #023031;
+}
+
+.result-link:hover {
+  color: #036b52;
+}

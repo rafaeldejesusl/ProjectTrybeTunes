@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { createUser } from '../services/userAPI';
+import '../style/login.css';
 
 class Login extends Component {
   constructor() {
@@ -38,23 +39,25 @@ class Login extends Component {
     const { user } = this.state;
     this.setState({ isLoading: true }, async () => {
       await createUser({ name: user });
-      history.push('/search');
+      history.push('/ProjectTrybeTunes/search');
     });
   }
 
   render() {
-    const loading = (<h1>Carregando...</h1>);
+    const loading = (<h1 className="loading">Carregando...</h1>);
     const { isDisabled, isLoading, user } = this.state;
     if (isLoading) return (loading);
     return (
-      <div data-testid="page-login">
-        <form>
+      <div data-testid="page-login" className="login-page">
+        <form className="login-form card">
           <label htmlFor="login-name-input">
             <input
               type="text"
               data-testid="login-name-input"
               id="login-name-input"
               name="user"
+              className="name-input"
+              placeholder="Nome"
               value={ user }
               onChange={ this.handleButton }
             />
@@ -62,6 +65,7 @@ class Login extends Component {
           <button
             type="submit"
             data-testid="login-submit-button"
+            className="btn btn-primary"
             disabled={ isDisabled }
             onClick={ this.handleSubmit }
           >

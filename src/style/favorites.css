@@ -1,0 +1,10 @@
+.favorites-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.favorite-rep {
+  width: 30%;
+}

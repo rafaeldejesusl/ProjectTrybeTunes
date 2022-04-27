@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import { getUser, updateUser } from '../services/userAPI';
+import '../style/profileEdit.css'
 
 class ProfileEdit extends Component {
   constructor() {
@@ -57,7 +58,7 @@ class ProfileEdit extends Component {
     };
     this.setState({ isLoading: true }, async () => {
       await updateUser(user);
-      history.push('/profile');
+      history.push('/ProjectTrybeTunes/profile');
     });
   }
 
@@ -72,16 +73,17 @@ class ProfileEdit extends Component {
   }
 
   render() {
-    const loading = (<h1>Carregando...</h1>);
+    const loading = (<h1 className="loading">Carregando...</h1>);
     const { isLoading, isDisabled, name, email, description, image } = this.state;
     return (
       <div data-testid="page-profile-edit">
         <Header />
         {isLoading ? loading : (
-          <>
+          <div className="text edit-div">
             <h2>Profile Edit</h2>
-            <form>
+            <form className="edit-form">
               <label htmlFor="edit-input-name">
+                Name:<br />
                 <input
                   type="text"
                   data-testid="edit-input-name"
@@ -92,6 +94,7 @@ class ProfileEdit extends Component {
                 />
               </label>
               <label htmlFor="edit-input-email">
+                Email:<br />
                 <input
                   type="text"
                   data-testid="edit-input-email"
@@ -102,6 +105,7 @@ class ProfileEdit extends Component {
                 />
               </label>
               <label htmlFor="edit-input-description">
+                Description:<br />
                 <textarea
                   data-testid="edit-input-description"
                   id="edit-input-description"
@@ -111,6 +115,7 @@ class ProfileEdit extends Component {
                 />
               </label>
               <label htmlFor="edit-input-image">
+                Image:<br />
                 <input
                   type="text"
                   data-testid="edit-input-image"
@@ -123,13 +128,14 @@ class ProfileEdit extends Component {
               <button
                 type="submit"
                 data-testid="edit-button-save"
+                className="btn btn-primary"
                 disabled={ isDisabled }
                 onClick={ this.handleSubmit }
               >
                 Editar perfil
               </button>
             </form>
-          </>
+          </div>
         )}
       </div>
     );

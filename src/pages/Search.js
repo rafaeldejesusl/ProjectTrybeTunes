@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Result from '../components/Result';
+import '../style/search.css';
 
 class Search extends Component {
   constructor() {
@@ -50,24 +51,28 @@ class Search extends Component {
   }
 
   render() {
-    const loading = (<h1>Carregando...</h1>);
-    const nothing = (<h2>Nenhum álbum foi encontrado</h2>);
+    const loading = (<h1 className="loading">Carregando...</h1>);
+    const nothing = (<h2 className="text results-div">Nenhum álbum foi encontrado</h2>);
     const { artist, artistSearched, albuns, isDisabled, isLoading } = this.state;
     return (
       <div data-testid="page-search">
         <Header />
+        <div className="search">
         {isLoading ? loading : (
-          <form>
+          <form className="search-form">
             <input
               type="text"
               data-testid="search-artist-input"
               name="artist"
+              className="artist-input"
+              placeholder="Nome do Artista"
               value={ artist }
               onChange={ this.handleButton }
             />
             <button
               type="submit"
               data-testid="search-artist-button"
+              className="btn btn-primary"
               disabled={ isDisabled }
               onClick={ this.handleClick }
             >
@@ -76,13 +81,14 @@ class Search extends Component {
           </form>
         )}
         {albuns.length > 0 ? (
-          <div>
+          <div className="text results-div">
             <h2>
               {`Resultado de álbuns de: ${artistSearched}`}
             </h2>
             <Result albuns={ albuns } />
           </div>
         ) : nothing}
+        </div>
       </div>
     );
   }

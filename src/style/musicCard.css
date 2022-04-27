@@ -1,0 +1,17 @@
+.music-heart {
+  height: 50px;
+  width: 50px;
+  filter: invert(31%) sepia(31%) saturate(1220%) hue-rotate(116deg) brightness(96%) contrast(98%);;
+}
+
+.audio-div {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.rep-div {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}

@@ -1,0 +1,39 @@
+.header-div {
+  background-color: #023031;
+  display: flex;
+  justify-content: right;
+  text-align: left;
+  height: 10vh;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+.header-nav {
+  width: 100%;
+}
+
+.btn-header {
+  background-color: #666;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  color: #023031;
+}
+
+.btn-header:hover {
+  background-color: #036b52;
+  color: #fff;
+}
+
+.header-text {
+  color: #036b52;
+  display: inline;
+  top: 10px;
+  padding: 5px;
+}
+
+.title-div {
+  background-color: #fff;
+  border-radius: 500px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

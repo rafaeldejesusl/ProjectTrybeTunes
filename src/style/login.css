@@ -1,0 +1,20 @@
+.login-form {
+  background-color: #666;
+  display: flex;
+  justify-content: space-around;
+  height: 30vh;
+  margin: auto;
+  margin-top: 35vh;
+  padding: 30px;
+  width: 30vw;
+}
+
+.name-input {
+  width: 100%;
+  text-align: center;
+}
+
+.login-image {
+  height: 10vh;
+  width: 10vw;
+}

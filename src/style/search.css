@@ -1,0 +1,21 @@
+.search {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+}
+
+.artist-input {
+  width: 75%;
+}
+
+.results-div {
+  margin-top: 5vh;
+  text-align: center;
+}

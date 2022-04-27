@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../style/album.css';
 
 class Album extends Component {
   constructor() {
@@ -41,23 +42,28 @@ class Album extends Component {
   }
 
   render() {
-    const loading = (<h1>Carregando...</h1>);
+    const loading = (<h1 className="loading">Carregando...</h1>);
     const { musics, album, artist, isLoading, favMusics } = this.state;
     return (
       <div data-testid="page-album">
         <Header />
         {isLoading ? loading : (
-          <>
-            <h2 data-testid="artist-name">{artist}</h2>
-            <h3 data-testid="album-name">
-              {album}
-            </h3>
-            {musics.map((music) => (<MusicCard
-              key={ music.trackId }
-              music={ music }
-              favMusics={ favMusics }
-            />))}
-          </>
+          <div className="text album-div">
+            <div className="details-div">
+              <h2 data-testid="artist-name">{artist}</h2>
+              <h3 data-testid="album-name">
+                {album}
+              </h3>
+              <img src={musics[0].artworkUrl100} alt={album} className="album-img"/>
+            </div>
+            <div className="musics-div">
+              {musics.map((music) => (<MusicCard
+                key={ music.trackId }
+                music={ music }
+                favMusics={ favMusics }
+              />))}
+            </div>
+          </div>
         )}
       </div>
     );
