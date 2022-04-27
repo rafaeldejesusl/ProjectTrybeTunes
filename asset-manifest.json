@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ProjectTrybeTunes/static/css/main.0b57f23e.chunk.css",
+    "main.css": "/ProjectTrybeTunes/static/css/main.6691b5c7.chunk.css",
     "main.js": "/ProjectTrybeTunes/static/js/main.26e9bb24.chunk.js",
     "main.js.map": "/ProjectTrybeTunes/static/js/main.26e9bb24.chunk.js.map",
     "runtime-main.js": "/ProjectTrybeTunes/static/js/runtime-main.d43277cc.js",
@@ -8,7 +8,7 @@
     "static/js/2.04dfe799.chunk.js": "/ProjectTrybeTunes/static/js/2.04dfe799.chunk.js",
     "static/js/2.04dfe799.chunk.js.map": "/ProjectTrybeTunes/static/js/2.04dfe799.chunk.js.map",
     "index.html": "/ProjectTrybeTunes/index.html",
-    "static/css/main.0b57f23e.chunk.css.map": "/ProjectTrybeTunes/static/css/main.0b57f23e.chunk.css.map",
+    "static/css/main.6691b5c7.chunk.css.map": "/ProjectTrybeTunes/static/css/main.6691b5c7.chunk.css.map",
     "static/js/2.04dfe799.chunk.js.LICENSE.txt": "/ProjectTrybeTunes/static/js/2.04dfe799.chunk.js.LICENSE.txt",
     "static/media/blackHeartIcon.083cb006.svg": "/ProjectTrybeTunes/static/media/blackHeartIcon.083cb006.svg",
     "static/media/whiteHeartIcon.2b822118.svg": "/ProjectTrybeTunes/static/media/whiteHeartIcon.2b822118.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.d43277cc.js",
     "static/js/2.04dfe799.chunk.js",
-    "static/css/main.0b57f23e.chunk.css",
+    "static/css/main.6691b5c7.chunk.css",
     "static/js/main.26e9bb24.chunk.js"
   ]
 }
