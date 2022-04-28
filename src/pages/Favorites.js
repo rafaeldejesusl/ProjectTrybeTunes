@@ -41,7 +41,7 @@ class Favorites extends Component {
         <Header />
         {isLoading ? loading : (
           <div className="text favorites-div">
-            <h2>Favorites</h2>
+            <h2 className="favorite-title">Favorites</h2>
             <div className="favorite-rep">
             {favMusics.map((music) => (<MusicCard
               key={ music.trackId }

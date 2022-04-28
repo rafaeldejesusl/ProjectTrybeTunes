@@ -1,10 +1,14 @@
 .favorites-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 5vh;
 }
 
 .favorite-rep {
+  margin: auto;
   width: 30%;
+}
+
+.favorite-title {
+  text-align: center;
 }
